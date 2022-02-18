@@ -1,5 +1,8 @@
 ////episodes are +! here than YT videos as there is intro is E1 on YT
 
+//!VanshSharma gumroad https://vanshsharma.notion.site/Namaste-JavaScript-266c18ecb0de4e5e998ecdc71369f495
+//!Saksham Bhatt https://sakshambhatt.hashnode.dev/notes-or-namaste-javascript-by-akshay-saini#heading-footnotes
+
 //!Javascript is synchronous,single threaded,non-blocking?, weakly typed languages(but coercion can be done).
 //!multi paradigm programming.
 //! e1,12,e3
@@ -87,13 +90,14 @@
 // console.log(x);
 
 //? == vs ===
-// if (a === undefined) {
+// var a;
+// if (a == undefined) {
 //   console.log("a is undefined");
 // } else {
 //   console.log("a is not undefined");
 // }
 
-//? loosely/weakly typed /but coercion can be done
+//? Dynamically/loosely/weakly typed /but coercion can be done
 
 // var a;
 // console.log(a);
@@ -190,7 +194,7 @@
 // var a = 100;
 
 //*6
-//!constt is fucking fucking strict// it has to be declared and initialized at inception
+//!const is fucking fucking strict// it has to be declared and initialized at inception
 
 // let a;
 
@@ -241,10 +245,10 @@
 // {
 //   var a = 10;
 //   let b = 100;
-//   const c = 1000;
+//   const c = 2000;
 //   console.log(a);
 //   console.log(b);
-//   console.log(c);
+//   console.log(d);
 // }
 
 // console.log(a);
@@ -272,7 +276,7 @@
 //   var d = 20;
 // }
 
-// const a =1;
+// const a = 1;
 // {
 //   const a = 10;
 //   console.log(a);
@@ -285,13 +289,22 @@
 //     }
 //   }
 // }
-//console.log(a);
+// console.log(a);
+// {
+//   let a = 10;
+//   {
+//     console.log(a);
+//   }
+// }
+
+// console.log(a);
 
 // const a = 1;
 // {
 //   const a = 10;
 //   {
 //     const a = 20;
+//     console.log(a);
 //     {
 //       const a = 200;
 //       console.log(a);
@@ -369,6 +382,7 @@
 // z();
 
 //!Uses of closures:
+//?--------- 0 Data hiding
 //? -------- 1 module design pattern
 //? -------- 2 currying
 //? -------- 3 functions like once
@@ -457,5 +471,130 @@
 //?parameters vs arguments
 
 //?First class functions -
+//! the ability of function to be used as values, can be passed as arguments and can be returned from another function
 
-//!test git
+//!https://www.youtube.com/watch?v=btj35dh3_U8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=16
+//!Callbacks/setTimeout makes it asynch i.e. the function passed as argument to setTimeout will be executed after timer expires, the next lines don't wait to execute. This is asynch
+
+//? what is a callback function
+//* y is a callback function
+//*callback
+//* check on call stack how setTimeout callback fn. pops up in call stack
+// setTimeout(() => {
+//   console.log("hello");
+// }, 10000);
+
+//*function being passed as argument to another function
+
+// function x(y) {
+//   console.log("x");
+//   y();
+// }
+
+// x(function y() {
+//   console.log("y");
+// });
+
+//? main thread and
+//? JavaScript is a synchronous and single-threaded, blocking - non-blocking thread
+//? blocking the main thread - never block main thread use asynch fns. instead
+
+//?garbage collection & remove event listeners
+
+// function attachEventListener() {
+//   let count = 0;
+//   document
+//     .getElementById("button-click-me")
+//     .addEventListener("click", function xyz() {
+//       console.log("button clicked", count++);
+//     });
+// }
+
+// attachEventListener();
+
+//!https://www.youtube.com/watch?v=8zKuNo4ay8E&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=17
+//!event loop
+
+//!callstack
+
+//!LIFO - callstack -GEC holds function a then LEC holds function call then popped of after "a" is console logged
+
+// function a() {
+//   console.log("a");
+// }
+
+// a();
+// console.log("end");
+
+////!callstack is inside in JS engine is inside Browser
+
+//!Browser
+//? Timer
+//? search engine
+//? local storage
+//? callstack
+//? DOM
+//? bluetooth
+//? geolocation
+//? Devtools (console,source, elements ....)
+
+//? WEB APIs gives us access to all the above
+//? WEB APIs - setTimeout, console.log, DOM APIs(document.), fetch() - which lets us call servers
+//? window is the global object - outermost scope also the tab that you see
+//? window.setTimeout, window.localstorage, window.console.log
+
+// console.log("start");
+
+// setTimeout(() => {
+//   console.log("callback");
+// }, 5000);
+
+// console.log("end");
+
+//! for above there is an async callback , callbacks are not pushed into callstack directly
+//! but through the callback queue then into callstack
+//! eventloop(superhero) pushes cb inside cb queue into callstack after 5000ms
+//! even the eventlistener callbacks are pushed inside callback queue first
+
+// document
+//   .getElementById("button-click-me")
+//   .addEventListener("click", function callbackfn() {
+//     console.log("callback");
+//   });
+
+//! how does fetch work
+
+//! fetch callbacks go inside microtask queue //? fetch is a promise
+
+//! microtask queue gets better preference than callback queue , execute below and check
+
+//! the callback function coming from promises(fetch) and mutation observer go to microtask queue
+
+//! all other callbacks(settimeout, eventlisteners) go to callback queue(task queue)
+
+//! starvation of callback queue because of lot of tasks inside microtask queue
+// console.log("start");
+
+// setTimeout(() => {
+//   console.log("callback fn of timeout called");
+// }, 5000);
+
+// fetch("https://randomuser.me/api").then(() => {
+//   console.log(
+//     "callback fn of fetch which is called only after server responds with randomusers"
+//   );
+// });
+
+// console.log("end");
+
+//! don't forget that callstack is inside JS Engine, ultimately tasks inside task queue(callback queue) and microtask queue has to be executed in call stack only
+
+//!mutation observer Mutation Observer: MutationObserver is a built-in object that observes a DOM element and fires a callback when it detects a change.
+
+// const mutationObserver = new MutationObserver((entries) => {
+//   console.log(entries);
+// });
+
+// const parent = document.querySelector(".parent");
+
+// mutationObserver.observe();
