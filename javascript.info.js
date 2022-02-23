@@ -131,34 +131,35 @@
 
 // let person = {};
 
-Array.prototype.cube = function (arr) {
-  return arr.map((x) => x ** 3);
-};
+// Array.prototype.cube = function (arr) {
+//   return arr.map((x) => x ** 3);
+// };
 
-let arr = [1, 2];
-console.log(arr.cube(arr));
+// let arr = [1, 2];
+// console.log(arr.cube(arr));
 
-/* let bob = { 
-  clothingChoice: 'cargo shorts',
-  complimentSelf: function() {
-    console.log(`${this.clothingChoice} are very stylish, so I am stylish.`);
-  },
-}; */
+// let bob = {
+//   clothingChoice: "cargo shorts",
+//   complimentSelf: function () {
+//     console.log(`${this.clothingChoice} are very stylish, so I am stylish.`);
+//   },
+// };
 
-/* let complimentBob = bob.complimentSelf.bind(bob);
-complimentBob(); */
+// bob.complimentSelf();
 
-/* Function.prototype.mybind = function(args){
-  let fn = this;
-  return function(...args2){
-    
-    fn.apply(args,[...args2]);
-  }
-}
+// let complimentBob = bob.complimentSelf.bind(bob);
+// complimentBob();
 
-let complimentBob = bob.complimentSelf.mybind(bob);
-complimentBob(); */
+// /* Function.prototype.mybind = function(args){
+//   let fn = this;
+//   return function(...args2){
 
+//     fn.apply(args,[...args2]);
+//   }
+// }
+
+// let complimentBob = bob.complimentSelf.mybind(bob);
+// complimentBob();
 // const urls = ['https://jsonplaceholder.typicode.com/todos/1', 'https://jsonplaceholder.typicode.com/todos/2', 'https://jsonplaceholder.typicode.com/todos/3'];
 
 // async function callUrls(url){
