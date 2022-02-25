@@ -1,40 +1,67 @@
+<!-- style="
+width: 20%;
+margin: auto;
+left: 50%;
+position: absolute;
+top: 50%;
+transform: translate(0, -50%);
+" -->
 <!DOCTYPE html>
-<html
-  lang="en"
-  style="
-    width: 20%;
-    margin: auto;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-  "
->
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Namaskara JS</title>
+    <title>Namaskara JS, CSS 0 to hero</title>
   </head>
-  <body style="background-color: black">
-    <div style="background-color: blue">Namaste Javascript</div>
+  <body class="body">
+    <div class="outerdiv">
+      <div class="innerdiv1">
+        Im a div and i'm display block by default so i behave like one as i
+        haven't got overridden by height and width
+      </div>
+      <div class="innerdiv2">
+        I'm also a div and i'm default display:block but here beacuse of
+        height/width given to me, i look like display:inline (which is nothing
+        but span's default);
 
-    <!-- <button id="button-click-me">Click me</button> -->
-    <!-- <input type="text" onkeyup="betterFunction()" /> -->
+        <br />
+        <br />
+        <br />
+        .innerdiv2 { <br />
+        background-color: greenyellow; <br />
+        text-align: center; <br />
+        border: 10px solid blue; <br />
+        height: 500px; <br />
+        width: 500px; <br />
+        margin: 0px 0px; <br />
+        box-sizing: border-box; <br />
+        }
+      </div>
 
-    <div style="background-color: yellow; width: 300px">
+      <span class="span">I'm a span and i'm inline by default</span>
+      I'm outer div
+    </div>
+
+    <script src="dan_awad_interview.js"></script>
+    <link rel="stylesheet" href="displayProperty.css" />
+    i'm body
+  </body>
+</html>
+
+<!-- <button id="button-click-me">Click me</button> -->
+<!-- <input type="text" onkeyup="betterFunction()" /> -->
+
+<!-- <div style="background-color: yellow; width: 300px">
       <div style="background-color: blue; height: 50px; margin-bottom: 30px">
         First
       </div>
       <div style="background-color: red; height: 50px; margin-top: 20px">
         Second
       </div>
-    </div>
+    </div> -->
 
-    <!-- <script src="app.js"></script>
+<!-- <script src="app.js"></script>
     <script async src="javascript.info.js"></script>
     <script defer src="jsthoughts.js"></script>
     <script defer src="debounce_throttle.js"></script> -->
-    <script src="dan_awad_interview.js"></script>
-  </body>
-</html>

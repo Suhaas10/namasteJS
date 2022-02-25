@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+}
+
+.body {
+  background-color: black;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  /* color: yellow; */
+}
+
+/* body has inline font properties in the html and background*/
+.outerdiv {
+  height: 100vh;
+  background-color: brown;
+  border-radius: border box;
+}
+
+.innerdiv1 {
+  background-color: antiquewhite;
+  text-align: center;
+  border: 10px solid blue;
+  background-color: blueviolet;
+}
+
+.innerdiv2 {
+  background-color: greenyellow;
+  text-align: center;
+  border: 10px solid blue;
+  height: 500px;
+  width: 500px;
+  margin: 0px 0px;
+  box-sizing: border-box;
+}
+
+.span {
+  display: inline-block;
+  background-color: blueviolet;
+}
