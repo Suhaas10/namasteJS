@@ -2,14 +2,23 @@
   font-size: larger;
 }
 
+.grandParent {
+  background-color: dimgrey;
+  padding: 10px;
+  height: 200vh;
+}
+
 .parent {
   background-color: aqua;
   padding: 10px;
+  height: 100vh;
 }
 
 .one {
   background-color: lightgreen;
   padding: 10px;
+  position: sticky;
+  top: 0;
 }
 
 .two {

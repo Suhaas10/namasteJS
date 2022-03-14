@@ -150,33 +150,37 @@
 // let complimentBob = bob.complimentSelf.bind(bob);
 // complimentBob();
 
-// /* Function.prototype.mybind = function(args){
+// Function.prototype.mybind = function (args) {
 //   let fn = this;
-//   return function(...args2){
-
-//     fn.apply(args,[...args2]);
-//   }
-// }
+//   console.log(this);
+//   return function (...args2) {
+//     fn.apply(args, [...args2]);
+//   };
+// };
 
 // let complimentBob = bob.complimentSelf.mybind(bob);
 // complimentBob();
-// const urls = ['https://jsonplaceholder.typicode.com/todos/1', 'https://jsonplaceholder.typicode.com/todos/2', 'https://jsonplaceholder.typicode.com/todos/3'];
+// const urls = [
+//   "https://jsonplaceholder.typicode.com/todos/1",
+//   "https://jsonplaceholder.typicode.com/todos/2",
+//   "https://jsonplaceholder.typicode.com/todos/3",
+// ];
 
-// async function callUrls(url){
-// 	for(let i=0;i<url.length;i++){
-//   		console.log(url[i]);
-// 			let response = await fetch(url[i]);
-//       console.log(response);
+// async function callUrls(url) {
+//   for (let i = 0; i < url.length; i++) {
+//     console.log(url[i]);
+//     let response = await fetch(url[i]);
+//     console.log(response);
 //   }
 // }
 
 // callUrls(urls);
 
-const user = {
-  name: "Marium",
-  yearOfBirth: 1999,
-  calcAge: function () {
-    const currentYear = new Date().getFullYear();
-    return currentYear - this.yearOfBirth;
-  },
-};
+// const user = {
+//   name: "Marium",
+//   yearOfBirth: 1999,
+//   calcAge: function () {
+//     const currentYear = new Date().getFullYear();
+//     return currentYear - this.yearOfBirth;
+//   },
+// };

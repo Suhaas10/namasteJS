@@ -17,6 +17,8 @@
 // var square2 = square(n);
 // var square4 = square(4);
 
+// console.log(square2);
+
 //!e4 hoisting, let and const are not hoisted//are actually hoisted but are in temporal dead zone - check javascript info/MDN
 //*refer javascript info and obvi MDN
 //?cannot access 'a' before initialisation
@@ -34,20 +36,20 @@
 // getName();
 // console.log(x);
 // console.log(getName);
+// console.log(getNameArrowSyntax);
 
 ///////////
 
 // getName();
 // console.log(x);
-// console.log(getName);
+// getNameArrowSyntax();
 
 // var x = 7;
-
 // function getName() {
 //   console.log("namaskara JS");
 // }
 
-// const getName = () => {
+// const getNameArrowSyntax = () => {
 //   console.log("namaskara JS");
 // };
 
@@ -78,8 +80,8 @@
 // }
 
 // console.log(window.a);
-// console.log(x);
 // console.log(this.a);
+// console.log(x);
 
 //!e7 undefined vs not defined
 //? memory has been allocated to undefined and it's a keyboard
@@ -174,15 +176,15 @@
 // var b = 10; //undefined
 
 //*2
-// let a = 100; //do window.a //let is stricter than var
-// console.log(a);
-// var b = 10; //do window.b
+//let a = 100; //do window.a //let is stricter than var
+//console.log(a);
+//var b = 10; //do window.b
 
 //*3
 
-// console.log("sadsaddsas");
-// let a = 10;
-// let a = 100; //syntax error
+//console.log("sadsaddsas");
+//let a = 10;
+//let a = 100; //syntax error
 
 //*4
 
@@ -239,16 +241,17 @@
 // console.log(c);
 
 //*3 //block scope and script scope
+
 // var a = 20;
 // let b = 200;
 // const c = 2000;
 // {
 //   var a = 10;
 //   let b = 100;
-//   const c = 2000;
+//   const c = 1000;
 //   console.log(a);
 //   console.log(b);
-//   console.log(d);
+//   console.log(c);
 // }
 
 // console.log(a);
@@ -302,6 +305,7 @@
 // const a = 1;
 // {
 //   const a = 10;
+//   console.log(a);
 //   {
 //     const a = 20;
 //     console.log(a);
@@ -409,13 +413,13 @@
 // for (let i = 0; i < 5; i++) {
 //   setTimeout(() => {
 //     console.log(i);
-//   }, 1000);
+//   }, i * 1000);
 // }
 
 // for (var i = 0; i < 5; i++) {
 //   setTimeout(() => {
 //     console.log(i);
-//   }, 1000);
+//   }, i * 1000);
 // }
 
 //!solving with var using closure
@@ -423,7 +427,7 @@
 //   function close(x) {
 //     setTimeout(() => {
 //       console.log(x);
-//     }, 1000);
+//     }, i * 1000);
 //   }
 //   close(i);
 // }
