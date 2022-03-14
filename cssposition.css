@@ -1,0 +1,23 @@
+* {
+  font-size: larger;
+}
+
+.parent {
+  background-color: aqua;
+  padding: 10px;
+}
+
+.one {
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.two {
+  background-color: orange;
+  padding: 10px;
+}
+
+.three {
+  background-color: pink;
+  padding: 10px;
+}

@@ -62,3 +62,15 @@
 // console.log(JSON.stringify(obj));
 
 //! 6----------rabbit question
+
+// function sayHello() {
+//   console.log("Hello Suhaas!");
+// }
+
+// while (true) {
+//   setTimeout(sayHello, 2000);
+//   setTimeout(sayHello, 2000);
+//   setTimeout(sayHello, 2000);
+//   setTimeout(sayHello, 2000);
+//   setTimeout(sayHello, 2000);
+// }
