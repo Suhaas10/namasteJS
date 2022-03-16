@@ -123,9 +123,9 @@ function Person(name) {
 }
 
 var p1 = new Person("arpit");
-p1.sayName1(); //undefined
+p1.sayName1(); //arpit
 p1.sayName2(); //arpit
 
 var p2 = new Person("Suhaas");
-p1.sayName1.bind(p2)(); //undefined
-p1.sayName2.bind(p2)(); //Suhaas
+p1.sayName1.bind(p2)(); //Suhaas
+p1.sayName2.bind(p2)(); //arpit

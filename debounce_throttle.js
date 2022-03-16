@@ -1,36 +1,39 @@
 // console.log("deb throt");
 
-// let counter = 0;
-// let getData = () => {
-//   console.log("getdata called-----" + counter++);
-// };
+let counter = 0;
 
-// let debounce = function (fn, delay) {
-//   let timer;
-//   return function () {
-//     let context = this;
-//     args = arguments;
-//     clearTimeout(timer);
+let getData = () => {
+  console.log("getdata calls-----" + counter++);
+  //   console.log("getdata debounce calls-----" + debounceCounter++);
+  //   console.log("getdata debounce calls-----" + throttleCounter++);
+};
 
-//     timer = setTimeout(() => {
-//       fn.apply(context, arguments);
-//     }, delay);
-//   };
-// };
+let debounce = function (fn, delay) {
+  let timer;
+  return function () {
+    let context = this;
+    args = arguments;
+    clearTimeout(timer);
 
-// // let betterFunction = debounce(getData, 300);
+    timer = setTimeout(() => {
+      fn.apply(context, arguments);
+    }, delay);
+  };
+};
 
-// let throttle = function (fn, interval) {
-//   let callFalg = true;
-//   return () => {
-//     if (callFalg) {
-//       fn();
-//       callFalg = false;
-//       setTimeout(() => {
-//         callFalg = true;
-//       }, interval);
-//     }
-//   };
-// };
+let debounceFunction = debounce(getData, 300);
 
-// let betterFunction = throttle(getData, 1000);
+let throttle = function (fn, interval) {
+  let callFalg = true;
+  return () => {
+    if (callFalg) {
+      fn();
+      callFalg = false;
+      setTimeout(() => {
+        callFalg = true;
+      }, interval);
+    }
+  };
+};
+
+let throttleFunction = throttle(getData, 1000);
