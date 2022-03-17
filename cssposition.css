@@ -30,3 +30,11 @@
   background-color: pink;
   padding: 10px;
 }
+
+.small {
+  font-size: 20px;
+}
+
+.large {
+  font-size: 100px;
+}
