@@ -6,6 +6,7 @@
   background-color: dimgrey;
   padding: 10px;
   height: 200vh;
+  position: relative;
 }
 
 .parent {
@@ -18,7 +19,7 @@
   background-color: lightgreen;
   padding: 10px;
   position: sticky;
-  top: 0;
+  right: 0;
 }
 
 .two {
