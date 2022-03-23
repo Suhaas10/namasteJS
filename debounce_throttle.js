@@ -26,8 +26,10 @@ let debounceFunction = debounce(getData, 300);
 let throttle = function (fn, interval) {
   let callFalg = true;
   return () => {
+    let context = this;
+    args = arguments;
     if (callFalg) {
-      fn();
+      fn.apply(context, args);
       callFalg = false;
       setTimeout(() => {
         callFalg = true;
