@@ -67,3 +67,15 @@ const memoize2 = (func) => {
     return cache[strKey];
   };
 };
+//tanvi baranwal signeasy
+(function () {
+  try {
+    throw new Error();
+  } catch (x) {
+    var x = 1,
+      y = 2;
+    console.log("x" + x);
+  }
+  console.log(x);
+  console.log(y);
+})();

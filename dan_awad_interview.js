@@ -24,42 +24,42 @@
 //   /  \   /   \
 //  d    e  f
 
-// let obj = {
-//   val: "A",
-//   left: {
-//     val: "B",
-//     left: {
-//       val: "D",
-//     },
-//     right: {
-//       val: "E",
-//     },
-//   },
-//   right: {
-//     val: "C",
-//     right: {
-//       val: "F",
-//     },
-//   },
-// };
-// console.log(JSON.stringify(obj));
+let obj = {
+  val: "A",
+  left: {
+    val: "B",
+    left: {
+      val: "D",
+    },
+    right: {
+      val: "E",
+    },
+  },
+  right: {
+    val: "C",
+    right: {
+      val: "F",
+    },
+  },
+};
+console.log(JSON.stringify(obj));
 
-// function invertTree(node) {
-//   if (node.left) {
-//     let left = node.left;
-//     let right = node.right;
-//     node.right = left;
+function invertTree(node) {
+  if (node.left) {
+    let left = node.left;
+    let right = node.right;
+    node.right = left;
 
-//     node.left = right;
-//     invertTree(left);
-//     invertTree(right);
-//   }
+    node.left = right;
+    invertTree(left);
+    invertTree(right);
+  }
 
-//   return node;
-// }
+  return node;
+}
 
-// console.log(invertTree(obj));
-// console.log(JSON.stringify(obj));
+console.log(invertTree(obj));
+console.log(JSON.stringify(obj));
 
 //! 6----------rabbit question
 

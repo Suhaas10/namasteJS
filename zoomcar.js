@@ -1,4 +1,4 @@
-{
+//{
   /* <head>
 	<script 1 async>
 	<script 2 defer>
