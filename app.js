@@ -22,19 +22,17 @@
 //!e4 hoisting, let and const are not hoisted//are actually hoisted but are in temporal dead zone - check javascript info/MDN
 //*refer javascript info and obvi MDN
 //?cannot access 'a' before initialisation
-
+// console.log(x);
 // var x = 7;
-
+// getName();
 // function getName() {
 //   console.log("namaskara JS");
 // }
-
+// getNameArrowSyntax();
 // const getNameArrowSyntax = () => {
-//   console.log("namaskara JS");
+//   console.log("namaskara JS arrow");
 // };
 
-// getName();
-// console.log(x);
 // console.log(getName);
 // console.log(getNameArrowSyntax);
 
@@ -42,7 +40,6 @@
 
 // getName();
 // console.log(x);
-// getNameArrowSyntax();
 
 // var x = 7;
 // function getName() {
