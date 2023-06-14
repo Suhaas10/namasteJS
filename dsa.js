@@ -215,4 +215,29 @@ var lengthOfLongestSubstring = function (s) {
   return max;
 };
 
-console.log(lengthOfLongestSubstring("abcabcdbb"));
+// console.log(lengthOfLongestSubstring("abcabcdbb"));
+
+//3Sum Closest
+var threeSumClosest = function (nums, target) {
+  let minimum = Infinity;
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      for (let k = j + 1; k < nums.length; k++) {
+        let sum = nums[i] + nums[j] + nums[k];
+        console.log("i", nums[i]);
+        console.log("j", nums[j]);
+        console.log("k", nums[k]);
+        console.log("sum", sum);
+        let diff = Math.abs(sum - target);
+
+        if (diff < minimum) {
+          minimum = sum;
+        }
+      }
+    }
+  }
+  console.log(minimum);
+  return minimum;
+};
+
+console.log(threeSumClosest([-1, 2, 1, -4], 1));
