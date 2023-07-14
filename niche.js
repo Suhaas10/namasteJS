@@ -30,10 +30,21 @@ function square(number) {
   return number * number;
 }
 
-let composedFn = compose(square, addTen);
+let composedFn = compose(addTen, square, addTen);
 
-console.log(composedFn(30));
+// console.log(composedFn(30));
 
+const sum = (a) => {
+  console.log("a", a);
+  return (b) => {
+    if (b) {
+      return sum(a + b);
+    }
+    return a;
+  };
+};
+console.log("sum", sum);
+console.log(sum(1)(2)());
 //pipe
 
 //memoize
@@ -68,14 +79,14 @@ const memoize2 = (func) => {
   };
 };
 //tanvi baranwal signeasy
-(function () {
-  try {
-    throw new Error();
-  } catch (x) {
-    var x = 1,
-      y = 2;
-    console.log("x" + x);
-  }
-  console.log(x);
-  console.log(y);
-})();
+// (function () {
+//   try {
+//     throw new Error();
+//   } catch (x) {
+//     var x = 1,
+//       y = 2;
+//     console.log("x" + x);
+//   }
+//   console.log(x);
+//   console.log(y);
+// })();
