@@ -2,27 +2,27 @@
 
 // let car = {
 //   brand: "tata",
-//   model: "2022",
+//   model: "2022"
 // };
 
-// function carTagLine(color, fuel) {
-//   console.log(
-//     this.brand +
-//       " car of " +
-//       this.model +
-//       " - color " +
-//       color +
-//       " - runs on " +
-//       fuel
-//   );
-// }
+function carTagLine(color, fuel) {
+  console.log(
+    this.brand +
+      " car of " +
+      this.model +
+      " - color " +
+      color +
+      " - runs on " +
+      fuel
+  );
+}
 
 // carTagLine.call(car, "red", "electicity");
 
-// let car2 = {
-//   brand: "mahindra",
-//   model: "2021",
-// };
+let car2 = {
+  brand: "mahindra",
+  model: "2021"
+};
 
 // carTagLine.call(car2, "blue", "hydrogen");
 
@@ -37,6 +37,7 @@
 // Function.prototype.mybind = function (...args) {
 //   let obj = this;
 //   params = args.slice(1);
+//   console.log(args[0]);
 //   return function (...args2) {
 //     obj.apply(args[0], [...params, ...args2]);
 //   };
@@ -94,38 +95,38 @@
 //small pistol - debouncing works better
 ///----4 on scroll
 
-// let counter = 0;
-// getData = () => {
-//   console.log("fetching data..." + counter++);
-// };
+let counter = 0;
+getData = () => {
+  console.log("fetching data..." + counter++);
+};
 
-// const debounce = function (fn, delay) {
-//   let timer;
-//   return function () {
-//     clearTimeout(timer);
+const debounce = function (fn, delay) {
+  let timer;
+  return function () {
+    clearTimeout(timer);
 
-//     timer = setTimeout(() => {
-//       fn(arguments);
-//     }, delay);
-//   };
-// };
+    timer = setTimeout(() => {
+      fn(arguments);
+    }, delay);
+  };
+};
 
-// const throttle = (fn, delay) => {
-//   let last = 0;
+const throttle = (fn, delay) => {
+  let last = 0;
 
-//   return (...args) => {
-//     const now = new Date().getTime();
+  return (...args) => {
+    const now = new Date().getTime();
 
-//     if (now - last < delay) {
-//       return;
-//     }
-//     last = now;
-//     return fn(...args);
-//   };
-// };
+    if (now - last < delay) {
+      return;
+    }
+    last = now;
+    return fn(...args);
+  };
+};
 
-// const betterFunction = debounce(getData, 300);
-// const betterFunction = throttle(getData, 3000);
+//const betterFunction = debounce(getData, 300);
+const betterFunction = throttle(getData, 300);
 
 // const debounce = (fn, delay) => {
 //   let timer;
@@ -248,3 +249,26 @@
 // };
 
 // console.log(flatten(a));
+
+let a = [1, 1, 2, 2, 3, 4, 5, 6, 7];
+
+// function removeDuplicates(arr) {
+//   let newArr = arr.filter((key, index, self) => {
+//     console.log(self.indexOf(key));
+//   });
+
+//   return newArr;
+// }
+
+// console.log(removeDuplicates(a));
+
+// function createCountObj(arr) {
+//   let countObj = {};
+//   for (const elem of arr) {
+//     countObj[elem] = (countObj[elem] || 0) + 1;
+//   }
+
+//   return countObj;
+// }
+
+// console.log(createCountObj(a));

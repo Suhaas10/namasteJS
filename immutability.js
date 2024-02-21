@@ -38,32 +38,45 @@
 // console.log(dog2);
 // console.log(dog1.nutrition.protein);
 
-let fruit1 = {
-  name: "orange",
-  price: 10,
-};
+// let fruit1 = {
+//   name: "orange",
+//   price: 10,
+// };
 
-let fruit2 = {
-  name: "watermelon",
-  price: 50,
-};
+// let fruit2 = {
+//   name: "watermelon",
+//   price: 50,
+// };
 
-let fruit3 = { ...fruit1 };
+// let fruit3 = { ...fruit1 };
 
-console.log(fruit3 == fruit1);
+// console.log(fruit3 == fruit1);
 
-function shallowClone(objToBeCloned) {
-  let copiedObj = {};
-  // let keys = Object.keys(objToBeCloned);
+// function shallowClone(objToBeCloned) {
+//   let copiedObj = {};
+//   // let keys = Object.keys(objToBeCloned);
 
-  for (const key in objToBeCloned) {
-    if (Object.hasOwnProperty.call(objToBeCloned, key)) {
-      copiedObj[key] = objToBeCloned[key];
-    }
-  }
+//   for (const key in objToBeCloned) {
+//     if (Object.hasOwnProperty.call(objToBeCloned, key)) {
+//       copiedObj[key] = objToBeCloned[key];
+//     }
+//   }
 
-  return copiedObj;
-}
+//   return copiedObj;
+// }
 
-let fruit4 = shallowClone(fruit2);
-console.log(fruit4 === fruit2);
+// let fruit4 = shallowClone(fruit2);
+// console.log(fruit4 === fruit2);
+
+// let arrA = [1, 2];
+// let arrB = [1, 2];
+
+// console.log(arrA === arrB);
+
+let a = 10;
+let b = 10;
+let c = [1, 2];
+let d = c;
+d = [3, 4, 5];
+
+console.log(c == d);
